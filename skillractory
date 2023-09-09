@@ -1,0 +1,16 @@
+for i in range(tickets):
+    age = int(input(f"Введите возвраст посетителя {i + 1}: "))
+    if age < 18:
+        tickets_cost = 0
+    elif 18 <= age <= 25:
+        tickets_cost = 990
+    else:
+        tickets_cost = 1390
+
+    total_cost += tickets_cost
+
+    if tickets > 3:
+        discount = total_cost * 0.10
+        total_cost -= discount
+
+print(f"Общая стоимость к оплате: {total_cost}руб.")
